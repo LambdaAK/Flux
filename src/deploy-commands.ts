@@ -7,6 +7,12 @@ const commands = [
   new SlashCommandBuilder()
     .setName('ping')
     .setDescription('Replies with Pong and shows bot latency'),
+  new SlashCommandBuilder()
+    .setName('join')
+    .setDescription('Join your current voice channel'),
+  new SlashCommandBuilder()
+    .setName('leave')
+    .setDescription('Leave the voice channel'),
 ].map(command => command.toJSON());
 
 const rest = new REST().setToken(process.env.DISCORD_BOT_TOKEN!);
